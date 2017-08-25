@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = "github.com/mattn/lile-example/gene9go";
+package gene9go;
+
+message Request {
+  string Word = 1;
+}
+
+message Response {
+  string Text = 1;
+}
+
+service Gene9go {
+  rpc Translate (Request) returns (Response) {}
+}
